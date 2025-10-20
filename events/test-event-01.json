@@ -1,0 +1,17 @@
+{
+	"body": "{\"name\": \"Local Test User\"}",
+	"headers": {
+		"Content-Type": "application/json"
+	},
+	"httpMethod": "POST",
+	"isBase64Encoded": false,
+	"path": "/test",
+	"queryStringParameters": null,
+	"requestContext": {
+		"accountId": "123456789012",
+		"apiId": "test-api",
+		"requestId": "test-request-id",
+		"requestTime": "09/Apr/2015:12:34:56 +0000",
+		"requestTimeEpoch": 1428582896000
+	}
+}
