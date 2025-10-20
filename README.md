@@ -1,6 +1,6 @@
 # AWS Lambda Function with TypeScript Example
 
-This repo contains a production-ready AWS Lambda function example with TypeScript that demonstrate best practices for efficiency, security, and maintainability.
+This repo contains a complete guide to explain how to create AWS CDK project with TypeScript Lambda functions.
 
 I'll walk you through creating a complete AWS CDK project that can deploy Lambda functions written in both JavaScript and TypeScript.
 
@@ -10,7 +10,7 @@ Before starting, ensure you have:
 
 -   Node.js (v18 or later) installed
 -   AWS CLI configured with your credentials
--   AWS CDK CLI installed globally:
+-   AWS CDK CLI installed globally
 -   AWS SAM CLI
 -   Docker Desktop (for SAM when test locally)
 
@@ -301,4 +301,28 @@ event/test-event-01.json
 
 ```bash
 sam local invoke -t template.yaml -e events/test-event-01.json function-01
+```
+
+### Generate Sample Event with SAM CLI
+
+The AWS SAM CLI provides a command to generate sample event payloads for various AWS services. These generated events can then be used for local testing of Lambda functions.
+
+The basic syntax is:
+
+```bash
+sam local generate-event <service> <event-type> [OPTIONS]
+```
+
+Generate S3 event sends to local Lambda function:
+
+```bash
+sam local generate-event s3 put
+
+sam local generate-event s3 delete
+```
+
+To generate a sample event for an API Gateway request using the AWS Proxy integration, specifically for a GET method:
+
+```bash
+sam local generate-event apigateway aws-proxy --method GET
 ```
