@@ -159,7 +159,7 @@ const function01 = new NodejsFunction(this, function01FunctionName, {
     runtime: Runtime.NODEJS_22_X,
     entry: path.join(
         __dirname,
-        '../lambda-functions/function01-ts/index.ts'
+        '/../lambda-functions/function01/index.ts'
     ),
     handler: 'handler',
     timeout: cdk.Duration.seconds(30),
